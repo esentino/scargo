@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 COPY src /app
 
 WORKDIR /app
-ENTRYPOINT [ "uvicorn", "--port", "8000", "main:app" ]
+ENTRYPOINT [ "uvicorn", "--host", "0.0.0.0", "--port", "8000", "main:app" ]
